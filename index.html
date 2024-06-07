@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elegant Website</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <!-- this is the internal CSS, making all <p> magenta colored -->
 <style>
@@ -30,10 +31,10 @@
                 <h2>Welcome to My Dummy Website</h2>
                 <p style="color:magenta;">This is a beautifully designed basic website template.</p>
             </div>
-            <p style="background-color: black;color:white">
+            <p id="testParagraph"style="background-color: black;color:white">
                 This is a test paragraph.
             </p>
-            
+            <button type="button" onclick="changeText('testParagraph','THIS IS CHANGED')">Clicking this button will change the text</button>
             <!-- This is a comment -->
             <pre style="background-color: green;">
                 This is another test paragraph
@@ -70,5 +71,6 @@
             <p>&copy; 2024 My Dummy Website. All rights reserved.</p>
         </div>
     </footer>
+    <script src="myScript.js"> </script>
 </body>
 </html>
