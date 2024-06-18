@@ -1,9 +1,18 @@
 const { Builder, By, until, WebDriver } = require('selenium-webdriver');
 const assert = require("assert");
+const chrome = require('selenium-webdriver/chrome');
+const path = require('path');
 async function runTest() {
     // Initialize the WebDriver
-    let driver = await new Builder().forBrowser('chrome').build();
-
+    
+    const chromeOptions = new chrome.Options();
+    chromeOptions.setChromeBinaryPath('/usr/bin/google-chrome');
+  
+    let driver = await new Builder()
+      .forBrowser('chrome')
+      .setChromeOptions(chromeOptions)
+      .build();
+    
     try {
         // Open the HTML page
         await driver.get('http://localhost:3000'); // Replace with the correct path to your HTML file
