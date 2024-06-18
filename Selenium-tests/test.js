@@ -2,7 +2,7 @@ const { Builder, By, until, WebDriver } = require('selenium-webdriver');
 const assert = require("assert");
 async function runTest() {
     // Initialize the WebDriver
-    let driver = await new Builder().forBrowser('CHROME').build();
+    let driver = await new Builder().forBrowser('chrome').build();
 
     try {
         // Open the HTML page
