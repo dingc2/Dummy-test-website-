@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [],
@@ -12,8 +11,8 @@
   "description": "",
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "express": "^4.19.2",
     "chromedriver": "^126.0.1",
+    "express": "^4.19.2",
     "geckodriver": "^4.4.1",
     "mocha": "^10.4.0",
     "selenium-webdriver": "^4.21.0"
