@@ -6,7 +6,10 @@ async function runTest() {
     // Initialize the WebDriver
     
     const chromeOptions = new chrome.Options();
-    chromeOptions.setChromeBinaryPath('/usr/bin/google-chrome');
+
+    const chromePath = process.env.CHROME_BINARY_PATH || '/usr/bin/google-chrome';
+
+    chromeOptions.setChromeBinaryPath(chromePath);
   
     let driver = await new Builder()
       .forBrowser('chrome')
