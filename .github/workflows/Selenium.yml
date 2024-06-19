@@ -23,9 +23,15 @@ jobs:
     
     - name: Setup Chrome
       uses: browser-actions/setup-chrome@v1.7.1
+      id: setup-chrome
       with: 
         chrome-version: 120
         install-chromedriver: true
+    - run: |
+        ${{ steps.setup-chrome.outputs.chrome-path }} --version
+        
+        
+      
 
     - name: Setup ChromeDriver
       run: |
