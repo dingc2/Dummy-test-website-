@@ -11,6 +11,12 @@ async function runTest() {
 
     chromeOptions.setChromeBinaryPath(chromePath);
   
+    chromeOptions.addArguments('--headless');
+    chromeOptions.addArguments('--disable-gpu');
+    chromeOptions.addArguments('--no-sandbox');
+    chromeOptions.addArguments('--disable-dev-shm-usage');
+    chromeOptions.addArguments('--remote-debugging-port=9222');
+
     let driver = await new Builder()
       .forBrowser('chrome')
       .setChromeOptions(chromeOptions)
