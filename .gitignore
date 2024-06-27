@@ -12,3 +12,6 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/cypress/fixtures
+/cypress/screenshots/
+/cypress/downloads/
